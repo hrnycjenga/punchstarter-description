@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 const axios = require('axios');
 const path = require('path');
 
-// Creating the express application
+// Creating an express application
 var app = express();
 
 // Using middlewares

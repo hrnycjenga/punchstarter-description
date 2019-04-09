@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');
-app.use('/description', routes);
+app.use('', routes);
 
 app.get('/', function(req, res) {
   res.json({message: "Description Component"});

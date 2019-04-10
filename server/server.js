@@ -3,19 +3,19 @@ var bodyParser = require('body-parser');
 const axios = require('axios');
 const path = require('path');
 
-// Creating the express application
+// Creating an express application
 var app = express();
 
 // Using middlewares
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/:home', express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');
-app.use('/description', routes);
+app.use('', routes);
 
-app.get('/', function(req, res) {
-  res.json({message: "Description Component"});
+app.get('', function(req, res) {
+  res.json({message: "Must add product ID to the URL", example: 'www.hackstarter.com/35'});
 })
 
 var port = 3013;

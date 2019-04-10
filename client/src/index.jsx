@@ -12,7 +12,6 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>Description</h1>
                 <div>
                     <Container/>
                 </div>
@@ -21,4 +20,4 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('containerComponent'));

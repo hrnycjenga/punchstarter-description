@@ -9,18 +9,17 @@ class Container extends Component {
     }
     render() {
         return (
-            <div>
-                <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet"/>
+            <div> 
                 <div class="header-container">
                     <div class="container">
                         <div class="flexHeader">
-                            <div class="headerItem">Explore</div>
-                            <div class="headerItem">Start a project</div>
+                            <a class="headerItem">Explore</a>
+                            <a class="headerItem">Start a project</a>
                         </div>
                         <div class="hackstarter">HACKSTARTER</div>
                         <div class="flexHeader">
-                            <div class="headerItem">Search 🔍</div>
-                            <div class="headerItem">Sign in</div>
+                            <a class="headerItem">Search 🔍</a>
+                            <a class="headerItem">Sign in</a>
                         </div>
                     </div>
                 </div>
@@ -30,21 +29,29 @@ class Container extends Component {
                     <p id='description'> SUMMARY: My product is state of the arts blah blah</p>
                 </div>
                 <div class='main-container'>
-                    <div>
+                    <div class = "left-main">
                         <div class="video">
-                            <div>
-                                <iframe frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/_OBlgSz8sSM"></iframe>
-                            </div>
+                            <iframe src="http://www.youtube.com/embed/_OBlgSz8sSM" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
                         </div>
                         <div class='click-container'>
-                            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-                            <div class='click'>Genre</div>
-                            <i class="fas fa-map-marker-alt fa-xs"></i>
-                            <div class='click'>Location</div>
+                            <a class='click-inner'>
+                                <i class="far fa-compass fa-xs"></i>
+                                <div class='click'>Genre</div>
+                            </a>
+                            <a class='click-inner'>
+                                <i class="fas fa-map-marker-alt fa-xs"></i>
+                                <div class='click'>Location</div>
+                            </a>
                         </div>
                     </div>
                     <div>
                         <div class="pledge1">Pledge Component</div>
+                    </div>
+                </div>
+                <div class='navbar'>
+                    <div>
+                        NavBar
+
                     </div>
                 </div>
             </div>

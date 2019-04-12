@@ -24,7 +24,7 @@ class Container extends Component {
     }
 
     requestDB() {
-        const path = window.location.pathname;
+        // const path = window.location.pathname;
         axios.get(`/main${path}`)
             .then(({data})=>{
                 let main = data[0];
@@ -91,7 +91,7 @@ class Container extends Component {
                             </div>
                         </div>
                         <div>
-                            <div class="pledge1">Pledge Component 1</div>
+                            <div id="pledge1" class="pledge1">Pledge Component 1</div>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ class Container extends Component {
                         </section>
                     </div>
                     <div class='info-right'>
-                        Pledge Component 2
+                        <div id="pledge2">Pledge Component 2</div>
                     </div>
                 </div>
             </div>

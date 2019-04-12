@@ -8,7 +8,7 @@ var app = express();
 
 // Using middlewares
 app.use(bodyParser.json());
-app.use('/:home', express.static(path.join(__dirname, '../client/dist')));
+app.use('', express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');

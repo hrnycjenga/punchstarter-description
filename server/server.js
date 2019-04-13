@@ -7,12 +7,13 @@ const cors = require('cors');
 
 // Creating an express application
 var app = express();
-app.use(cors({origin: '*'}));
+app.use(cors());
 
 // Using middlewares
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
+// app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');

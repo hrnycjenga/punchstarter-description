@@ -12,7 +12,7 @@ app.use(cors());
 // Using middlewares
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use('/', express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');

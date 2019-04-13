@@ -25,7 +25,7 @@ class Container extends Component {
 
     requestDB() {
         const path = window.location.pathname;
-        axios.get(`/main${path}`)
+        axios.get(`http://ec2-52-91-5-216.compute-1.amazonaws.com/main${path}`)
             .then(({data})=>{
                 let main = data[0];
                 this.setState({
@@ -37,14 +37,14 @@ class Container extends Component {
                     location: main.location
                 })
             })
-        axios.get(`/paragraphs${path}`)
+        axios.get(`http://ec2-52-91-5-216.compute-1.amazonaws.com/paragraphs${path}`)
             .then(({data})=>{
                 let paragraph = data[0];
                 this.setState({
                     paragraphs: paragraph.paragraph
                 })
             })
-        axios.get(`/pictures${path}`)
+        axios.get(`http://ec2-52-91-5-216.compute-1.amazonaws.com/pictures${path}`)
             .then(({data})=>{
                 let picture = data[0];
                 this.setState({

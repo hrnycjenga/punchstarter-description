@@ -7,7 +7,7 @@ const cors = require('cors');
 
 // Creating an express application
 var app = express();
-app.use(cors({origin: '*'}));
+app.use(cors({origin: 'null'}));
 
 // Using middlewares
 app.use(bodyParser.json());

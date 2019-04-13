@@ -7,7 +7,7 @@ const cors = require('cors');
 
 // Creating an express application
 var app = express();
-app.use(cors({origin: 'null'}));
+app.use(cors({origin: 'http://localhost:3001'}));
 
 // Using middlewares
 app.use(bodyParser.json());

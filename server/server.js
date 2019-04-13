@@ -11,7 +11,7 @@ var app = express();
 // Using middlewares
 
 app.use(express.static('/:id', path.join(__dirname, '../client/dist')));
-app.use(express.static(path.join(__dirname, '../client/dist')));
+// app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
@@ -20,9 +20,9 @@ app.use(morgan('dev'));
 const routes = require('./router/router.js');
 app.use('', routes);
 
-// app.get('', function(req, res) {
-//   res.json({message: "Must add product ID to the URL", example: 'www.hackstarter.com/35'});
-// })
+app.get('', function(req, res) {
+  res.json({message: "Must add product ID to the URL", example: 'www.hackstarter.com/35'});
+})
 
 var port = 3013;
 app.listen(port, function () {

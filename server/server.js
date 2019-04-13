@@ -10,7 +10,7 @@ var app = express();
 
 // Using middlewares
 
-app.use(express.static('/:id', path.join(__dirname, '../client/dist')));
+app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 // app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
 app.use(bodyParser.json());

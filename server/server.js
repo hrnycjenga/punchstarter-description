@@ -2,13 +2,15 @@ var express = require('express');
 var bodyParser = require('body-parser');
 const axios = require('axios');
 const path = require('path');
+const morgan = require('morgan');
 
 // Creating an express application
 var app = express();
 
 // Using middlewares
 app.use(bodyParser.json());
-app.use('', express.static(path.join(__dirname, '../client/dist')));
+app.use(morgan('dev'));
+app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 const routes = require('./router/router.js');

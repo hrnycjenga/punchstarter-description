@@ -24,7 +24,7 @@ class Container extends Component {
     }
 
     requestDB() {
-        // const path = window.location.pathname;
+        const path = window.location.pathname;
         axios.get(`/main${path}`)
             .then(({data})=>{
                 let main = data[0];

@@ -3,9 +3,11 @@ var bodyParser = require('body-parser');
 const axios = require('axios');
 const path = require('path');
 const morgan = require('morgan');
+const cors = require('cors');
 
 // Creating an express application
 var app = express();
+app.use(cors());
 
 // Using middlewares
 app.use(bodyParser.json());

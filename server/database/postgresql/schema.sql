@@ -1,25 +1,23 @@
-DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS project;
 
-CREATE TABLE product(
-  productId INTEGER PRIMARY KEY, 
-  productTitle TEXT, 
-  productSummary TEXT, 
-  productCreator TEXT, 
-  productVideoURL TEXT, 
-  productCategroy TEXT, 
-  productCompanyAddress TEXT
+CREATE TABLE project(
+  projectId SERIAL, 
+  projectTitle TEXT, 
+  projectSummary TEXT, 
+  projectVideo TEXT, 
+  projectAddress TEXT
   );
 
 DROP TABLE IF EXISTS descriptions;
 
 CREATE TABLE descriptions(
-  descriptionId INT PRIMARY KEY, 
+  descriptionId SERIAL, 
   descriptionEntry TEXT
   );
 
 DROP TABLE IF EXISTS pictures;
 
 CREATE TABLE pictures(
-  pictureId INT PRIMARY KEY, 
+  pictureId SERIAL, 
   pictureURL TEXT
   );

@@ -25,21 +25,28 @@ const seedLimit = 10
 
 console.time('seedTime');
 let counter = 0
+let insertSize = 10
 
 seedDb = () => {
   return db.connect().then((client) => {
-    let title = "'" + faker.commerce.productName() + "'"
-    let summary = "'" + faker.commerce.productAdjective() + " " + faker.commerce.productMaterial() + "'"
-    let video =  "'" + videos[(Math.floor(Math.random() * videos.length))] + "'"
-    let address = "'" + faker.address.city(1) + ", " + faker.address.stateAbbr() + "'"
-    let data = "("  + title + ","+ summary + "," + video + "," + address + ")"
+    let rowGen = () => {
+      data = ''
+      for(let i = 0; i < insertSize; i ++ ) {
+        let title = "'" + faker.commerce.productName() + "'"
+        let summary = "'" + faker.commerce.productAdjective() + " " + faker.commerce.productMaterial() + "'"
+        let video =  "'" + videos[(Math.floor(Math.random() * videos.length))] + "'"
+        let address = "'" + faker.address.city(1) + ", " + faker.address.stateAbbr() + "'"
+        data.concat(`(${title}, ${summary}, ${video}, ${address}),`)
+      }
+      return data
+    }
     let queryStr = 
     `INSERT INTO project(
       projectTitle, 
       projectSummary, 
       projectVideo, 
       projectAddress
-      ) VALUES ${data}`
+      ) VALUES ${rowGen()}`
     console.log(data)
     return client
       .query(queryStr)

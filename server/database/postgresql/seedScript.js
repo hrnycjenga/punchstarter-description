@@ -64,7 +64,7 @@ seedDb = () => {
             throw e
           })
         }
-      return insert()
+      return insert()''
     } else {
       console.log('seeding complete')
       return client.release()

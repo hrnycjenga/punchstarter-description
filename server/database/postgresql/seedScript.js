@@ -77,7 +77,7 @@ seedProject = () => {
           .query(queryStr)
           .then(() => {
             if(projectCounter < seedLimit) {
-              // console.log(`inserted into project table ${projectCounter} times`)
+              console.log(`inserted into project table ${projectCounter} times`)
               projectCounter ++
               return insert()
             } else {
@@ -110,7 +110,7 @@ seedDescription = () => {
           .query(queryStr)
           .then(() => {
             if(descriptionCounter < seedLimit) {
-              // console.log(`inserted into description table ${descriptionCounter} times`)
+              console.log(`inserted into description table ${descriptionCounter} times`)
               descriptionCounter ++
               return insert()
             } else {
@@ -140,7 +140,7 @@ seedPictures = () => {
           .query(queryStr)
           .then(() => {
             if(picturesCounter < seedLimit) {
-              // console.log(`inserted into pictures table ${picturesCounter} times`)
+              console.log(`inserted into pictures table ${picturesCounter} times`)
               picturesCounter ++
               return insert()
             } else {

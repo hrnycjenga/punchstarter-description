@@ -1,7 +1,7 @@
 const db = require('../model/dbConnection.js');
 
 module.exports = {
-    main: (req, res) => {
+    project: (req, res) => {
         console.log("ID: ", req.params.id)
         var id = req.params.id;
         db.all(`SELECT * FROM main WHERE id=${id};`, (err, row)=>{

@@ -5,26 +5,28 @@ class Container extends Component {
   constructor() {
     super();
     this.state = {
-      //main
       creator: null,
       title: null,
       summary: null,
-      videoURL: null,
+      videoURL:"http://www.youtube.com/embed/vbBzXPQ4CFk",
       genre: null,
       location: null,
-      //paragraph
       paragraphs: null,
-      //picture
       pictures: null
     }
     this.requestDB = this.requestDB.bind(this);
+    this.getData = this.getData.bind(this)
   }
   componentDidMount() {
-    this.requestDB();
+    // sqlite db request
+    // this.requestDB();
+    // postgresql db request
+    this.getData()
   }
 
   requestDB() {
     const path = window.location.pathname;
+    console.log('logging path =>', path)
     axios.get(`/main${path}`)
       .then(({ data }) => {
         let main = data[0];
@@ -53,6 +55,41 @@ class Container extends Component {
       })
   }
 
+  getData () {
+    let id = window.location.pathname.split('/')[1];
+    axios.get('/main', {params: {id:id}})
+    .then(({data}) => {
+      data = data.rows[0]
+      this.setState({
+        title: data.projecttitle,
+        summary: data.projectsummary,
+        videoURL: data.projectvideo,
+        location: data.address
+      })
+    })
+    .then(() => {
+      return axios.get('/paragraph', {params: {id:id}})
+    })
+    .then(({data}) => {
+      data = data.rows[0]
+      this.setState({
+        paragraphs: data.descriptionentry
+      })
+    })
+    .then(() => {
+      return axios.get('/pictures', {params: {id:id}})
+    })
+    .then(({data}) => {
+      data = data.rows[0]
+      this.setState({
+        pictures: data.pictureurl
+      })
+    })
+    .catch((e) => {
+      if(e) console.log('error in client =>', e)
+    })
+  }
+
   render() {
     return (
       <div id='start'>
@@ -77,7 +114,7 @@ class Container extends Component {
           <div className='main-container'>
             <div className="left-main">
               <div className="video">
-                <iframe src="http://www.youtube.com/embed/_OBlgSz8sSM" allow="encrypted-media" allowFullScreen></iframe>
+                <iframe src={this.state.videoURL} allow="encrypted-media" allowFullScreen></iframe>
               </div>
               <div className='click-container'>
                 <a className='click-inner'>

@@ -3,18 +3,29 @@ const imageSrc = 'https://picsum.photos/600/400'
 const randomVid = 'https://random-ize.com/random-youtube/goo-f.php'
 
 let videos =  [
-  'https://youtu.be/JdWawfAKutQ',
-  'https://youtu.be/S8AJPHjLTR8',
-  'https://youtu.be/rNgWLIXNfxY?list=UUPLAYER_cookingwithdog',
-  'https://youtu.be/czYSJg7bfqI?list=UUPLAYER_PopularMMOs',
-  'https://youtu.be/0ylWDygEaD4?list=UUPLAYER_TeamFourStar',
-  'https://youtu.be/QRsK2r09s0s?list=UUPLAYER_sortedfood',
-  'https://youtu.be/ImVD6Yjr5dw?list=UUPLAYER_superkidstv',
-  'https://youtu.be/XIzimkcuEuk',
-  'https://youtu.be/FtX8nswnUKU',
-  'https://youtu.be/6tAbZpduDLM?list=UUPLAYER_movieclips'
-]
+  'https://youtube.com/embed/JdWawfAKutQ',
+  'https://youtube.com/embed/S8AJPHjLTR8',
+  'https://youtube.com/embed/rNgWLIXNfxY?list=UUPLAYER_cookingwithdog',
+  'https://youtube.com/embed/czYSJg7bfqI?list=UUPLAYER_PopularMMOs',
+  'https://youtube.com/embed/0ylWDygEaD4?list=UUPLAYER_TeamFourStar',
+  'https://youtube.com/embed/QRsK2r09s0s?list=UUPLAYER_sortedfood',
+  'https://youtube.com/embed/ImVD6Yjr5dw?list=UUPLAYER_superkidstv',
+  'https://youtube.com/embed/XIzimkcuEuk',
+  'https://youtube.com/embed/FtX8nswnUKU',
+  'https://youtube.com/embed/6tAbZpduDLM?list=UUPLAYER_movieclips',
+  'http://www.youtube.com/embed/vIfGgDnmBXg',
+  'http://www.youtube.com/embed/Ad9hu_saIsc',
+  'http://www.youtube.com/embed/gYCVMxQ-jWU',
+  'http://www.youtube.com/embed/DFV6SZXNyYA',
+  'http://www.youtube.com/embed/pZXNeEeF7kw',
+  'http://www.youtube.com/embed/FEH9iqWm_xQ',
+  'http://www.youtube.com/embed/ROeadOshACA',
+  'http://www.youtube.com/embed/ME1ezSWjTFo',
+  'http://www.youtube.com/embed/R-DyQGDzP_A',
+  'http://www.youtube.com/embed/PfwwCpAy0-0',
+  
 
+]
 let pictures = [
   "https://drive.google.com/uc?id=1ecBITidVg60d5k0WYPSinQMHeJtPz2MX", 
   "https://drive.google.com/uc?id=18j5HM3s7UljWcy1H_Q1YGMGONCtVuu3D", 

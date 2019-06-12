@@ -1,16 +1,16 @@
-var faker = require('faker');
+// var faker = require('faker');
 var sqlite3 = require('sqlite3').verbose();
 var path = require('path');
 
 /*----------------------PUT DATA INTO SQLITE DB-----------------------*/
 var pathway = path.join(__dirname, '../database/description.db');
-const db = new sqlite3.Database(pathway, (err)=>{
-  if (err) {
-    return console.error(err.message);
-  } else {
-    console.log('Connected to SQlite database')
-  }
-});
+// const db = new sqlite3.Database(pathway, (err)=>{
+//   if (err) {
+//     return console.error(err.message);
+//   } else {
+//     console.log('Connected to SQlite database')
+//   }
+// });
 // for (let i = 0; i < 99; i++) {
 //   var title = faker.company.companyName();
 //   var summary = faker.commerce.productName();
@@ -29,4 +29,4 @@ const db = new sqlite3.Database(pathway, (err)=>{
 
 /*----------------------------------------------------------*/
 
-module.exports = db;
+// module.exports = db;

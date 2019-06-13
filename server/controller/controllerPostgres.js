@@ -2,9 +2,7 @@ const {projectModel, paragraphsModel, picturesModel} = require('../model/modelsP
 
 module.exports = {
   getProjectInfo: (req, res) => {
-    // console.log('expect id from postgresController => ', req.params)
     let projectId = req.query.id
-    // console.log('logging projectid in controller => ', projectId)
     projectModel(projectId, (err, data) => {
       if(err) {
         res.status(500)
@@ -12,7 +10,6 @@ module.exports = {
         res.send()
       } else {
         res.status(200)
-        // console.log('got project ad controller logging data =>', data)
         res.send(data)
       }
     })
@@ -27,7 +24,6 @@ module.exports = {
         res.send()
       } else {
         res.status(200)
-        // console.log('got paragraph at controller logging data =>', data)
         res.send(data)
       }
     })
@@ -43,7 +39,6 @@ module.exports = {
         res.send()
       } else {
         res.status(200)
-        // console.log('got picture at controller logging data =>', data)
         res.send(data)
       }
     })

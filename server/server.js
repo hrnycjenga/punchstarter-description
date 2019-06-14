@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
   res.json({message: "Must add product ID to the URL", example: 'www.hackstarter.com/35'});
 })
 
-var port = 3013;
+var port = process.env.PORT || 3013;
 app.listen(port, function () {
   console.log('Listening on localhost: ' + port);
 });

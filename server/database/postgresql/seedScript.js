@@ -4,7 +4,7 @@ const faker = require('faker')
 const { password } = require('./password.js')
 const { user }= require('./username')
 const pgHost = process.env.PGHOST || 'localhost';
-const user
+const pgUser = user
 const pgDatabase = process.env.PGDATABASE || 'postgres';
 const pgPassword = process.env.PGPASSWORD || password;
 const pgPort = process.env.PGPORT || 5432;

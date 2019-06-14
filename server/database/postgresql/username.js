@@ -1,3 +1,3 @@
 module.exports = {
-  user: process.env.PGUSER || 'punch'
+  user: process.env.PGUSER || 'postgres'
 }

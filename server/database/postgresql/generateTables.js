@@ -2,10 +2,8 @@ const { Pool } = require('pg');
 const {password} = require('./password.js')
 const pgHost = process.env.PGHOST || 'localhost';
 const { user }= require('./username')
-
 const pgUser = user
 const pgDatabase = process.env.PGDATABASE || 'postgres';
-
 const pgPassword = process.env.PGPASSWORD || password;
 const pgPort = process.env.PGPORT || 5432;
 const connectionString = `postgresql://${pgDatabase}:${pgPassword}@${pgHost}:${pgPort}/${pgUser}`

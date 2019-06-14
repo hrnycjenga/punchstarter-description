@@ -1,9 +1,9 @@
 const {Pool} = require('pg')
 const {videos, pictures} = require('./media.js')
 const faker = require('faker')
-const password = require('./password.js')
+const { password } = require('./password.js')
 const pgHost = process.env.PGHOST || 'localhost';
-const pgUser = process.env.PGUSER || 'punchcomments';
+const pgUser = process.env.PGUSER || 'postgres';
 const pgDatabase = process.env.PGDATABASE || 'postgres';
 const pgPassword = process.env.PGPASSWORD || password;
 const pgPort = process.env.PGPORT || 5432;

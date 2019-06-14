@@ -16,7 +16,7 @@ module.exports = {
   },
 
   picturesModel: (pictureId, cb) => {
-    console.log('logging id at picture model =>', pictureId)
+    console.log('logging id at picture model =>', pic)
     db.query(`SELECT * FROM pictures WHERE pictureId = ${pictureId};`, (err, data) => {
       if (err) console.log('failed to get picture at controller', err)
       else cb(null, data)

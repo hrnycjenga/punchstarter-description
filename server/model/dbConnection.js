@@ -1,5 +1,5 @@
 // var faker = require('faker');
-var sqlite3 = require('sqlite3').verbose();
+// var sqlite3 = require('sqlite3').verbose();
 var path = require('path');
 
 /*----------------------PUT DATA INTO SQLITE DB-----------------------*/

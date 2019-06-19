@@ -1,5 +1,5 @@
 const { Pool } = require('pg')
-const {password}  = require('./password.js')
+// const {password}  = require('./password.js')
 const pgHost = process.env.PGHOST || 'localhost';
 const pgUser = process.env.PGUSER || 'postgres';
 const pgDatabase = process.env.PGDATABASE || 'postgres';

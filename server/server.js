@@ -5,12 +5,7 @@ const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
 const {getParagraphInfo, getPicturesInfo, getProjectInfo} = require('./controller/controllerPostgres.js')
-const fs = require('fs')
-const loaderToken = require('./loaderio-8818b50c31e6b903d28cf61ce1b9a92b.txt')
-const tokenRead = fs.readFile(loaderToken, 'utf8', (err, data) => {
-  if(err) throw err
-  else return data
-})
+
 // Creating an express application
 var app = express();  
 
@@ -23,7 +18,6 @@ app.use(morgan('dev'));
 //routes
 const routes = require('./router/router.js');
 // app.use('/', routes);
-app.get('/loaderio-8818b50c31e6b903d28cf61ce1b9a92b', tokenRead)
 app.get('/main', getProjectInfo)
 app.get('/paragraph', getParagraphInfo)
 app.get('/pictures', getPicturesInfo)

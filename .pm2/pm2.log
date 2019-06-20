@@ -1,0 +1,12 @@
+2019-06-19T20:12:49: PM2 log: Stopping app:API id:0
+2019-06-19T20:12:49: PM2 log: App [API:0] exited with code [0] via signal [SIGINT]
+2019-06-19T20:12:49: PM2 log: pid=3452 msg=process killed
+2019-06-19T20:19:18: PM2 log: App [server:1] starting in -fork mode-
+2019-06-19T20:19:18: PM2 log: App [server:1] online
+2019-06-20T14:08:44: PM2 log: pm2 has been killed by signal, dumping process list before exit...
+2019-06-20T14:08:44: PM2 log: Deleting process 0
+2019-06-20T14:08:44: PM2 log: Deleting process 1
+2019-06-20T14:08:44: PM2 log: Stopping app:server id:1
+2019-06-20T14:08:44: PM2 log: App [server:1] exited with code [0] via signal [SIGHUP]
+2019-06-20T14:08:45: PM2 log: pid=3804 msg=process killed
+2019-06-20T14:08:45: PM2 log: Exited peacefully

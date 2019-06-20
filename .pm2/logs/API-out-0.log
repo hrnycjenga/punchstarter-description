@@ -1,0 +1,31 @@
+[0mGET /1245 [36m301 [0m2.384 ms - 175[0m
+[0mGET /1245/ [32m200 [0m3.234 ms - 641[0m
+[0mGET /1245/style.css [32m200 [0m0.596 ms - 4080[0m
+[0mGET /1245/bundle.js [32m200 [0m0.329 ms - 141081[0m
+[0mGET /favicon.ico [36m301 [0m0.339 ms - 189[0m
+[0mGET /favicon.ico/ [32m200 [0m0.370 ms - 641[0m
+[0mGET /1245/style.css [36m304 [0m0.883 ms - -[0m
+[0mGET /12445/ [32m200 [0m0.365 ms - 641[0m
+[0mGET /main?id=1245 [0m- [0m- ms - -[0m
+[0mGET /12445/style.css [32m200 [0m0.323 ms - 4080[0m
+[0mGET /12445/bundle.js [32m200 [0m0.335 ms - 141081[0m
+[0mGET /favicon.ico/ [36m304 [0m0.323 ms - -[0m
+[0mGET /12445/ [36m304 [0m0.518 ms - -[0m
+[0mGET /main?id=12445 [0m- [0m- ms - -[0m
+[0mGET /12445/style.css [36m304 [0m0.321 ms - -[0m
+[0mGET /12445/bundle.js [36m304 [0m0.306 ms - -[0m
+[0mGET /favicon.ico [36m301 [0m0.231 ms - 189[0m
+[0mGET /favicon.ico/ [32m200 [0m0.616 ms - 641[0m
+[0mGET /12445/ [36m304 [0m0.261 ms - -[0m
+[0mGET /main?id=12445 [0m- [0m- ms - -[0m
+[0mGET /12445/style.css [36m304 [0m0.186 ms - -[0m
+[0mGET /12445/bundle.js [36m304 [0m0.174 ms - -[0m
+[0mGET /favicon.ico [36m301 [0m0.181 ms - 189[0m
+[0mGET /favicon.ico/ [32m200 [0m0.461 ms - 641[0m
+failed to get project at controller { Error: connect ETIMEDOUT 18.212.54.123:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '18.212.54.123',
+  port: 5432 }

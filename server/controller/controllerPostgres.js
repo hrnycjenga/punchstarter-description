@@ -31,7 +31,6 @@ module.exports = {
 
   getPicturesInfo: (req, res) => {
     let pictureId = req.query.id
-    console.log('logging id at picture controller =>', pictureId)
     picturesModel(pictureId, (err, data) => {
       if(err) {
         res.status(500)

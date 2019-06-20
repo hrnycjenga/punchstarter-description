@@ -5,8 +5,7 @@ const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
 const {getParagraphInfo, getPicturesInfo, getProjectInfo} = require('./controller/controllerPostgres.js')
-const fs = require('fs');
-const loaderioFile = require('./loaderio-8818b50c31e6b903d28cf61ce1b9a92b.txt')
+
 // Creating an express application
 var app = express();  
 
@@ -22,12 +21,6 @@ const routes = require('./router/router.js');
 app.get('/main', getProjectInfo)
 app.get('/paragraph', getParagraphInfo)
 app.get('/pictures', getPicturesInfo)
-app.get('/loaderio-8818b50c31e6b903d28cf61ce1b9a92b', fs.readFile(loaderioFile, 'utf8',
- (err, data) => {
-   if(err) throw err;
-  console.log(data)
- })
-)
 app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/', function(req, res) {
